@@ -1,5 +1,5 @@
 {
-    "name": "template blog search",
+    "name": "template blogsearch",
     "sections": {
         "template": {
             "type": "template-blogsearch"
