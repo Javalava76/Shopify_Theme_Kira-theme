@@ -1,0 +1,9 @@
+{
+    "name": "template blog search",
+    "sections": {
+        "template": {
+            "type": "template-blogsearch"
+        }
+    },
+    "order": ["template"]
+}
