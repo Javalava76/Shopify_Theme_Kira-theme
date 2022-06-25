@@ -1,13 +1,13 @@
 <form class="search flex justify-center mt-2" action="/search" method="get" role="search">
-    <div class="xl:w-96 p-1 shadow-sm shadow-gray-500 rounded-lg">
+    <div class="w-full mx-4 lg:w-96 p-1 shadow-sm shadow-gray-500 rounded-lg">
         <div class="input-group relative flex items-stretch w-full rounded">
+            <input type="hidden" name="type" value="article" />
             <input type="search" name="q"{% if search.performed %} 
                 value="{{ search.terms | escape | downcase }}" 
-            {% else %}
-                value=" "
+            
             {% endif %} 
             class="form-control relative flex-auto min-w-0 block w-full pl-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Search" aria-label="Search" />
-            <input type="hidden" name="type" value="article" />
+            
             <button type="submit" class="input-group-text flex items-center pl-1 pr-3 py-1.5 text-base font-normal text-gray-700 text-center whitespace-nowrap rounded" id="basic-addon2">
                 {% render 'icon-search' %}
             </button>
