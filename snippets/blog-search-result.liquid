@@ -10,8 +10,9 @@
             No results. Please try again.
         </div>
     {% else %}
-        <div class="max-w-6xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="max-w-6xl mx-auto md:px-20">
+            {% assign results = search.results_count %}
+            <div class="grid grid-cols-1 {% if results == 1 %} md:grid-cols-1 {% elsif results == 2 %} md:grid-cols-2 {% else %} md:grid-cols-3 {% endif %} gap-4">
                 {% for article in search.results %}
                     <div class="w-full py-6 px-3">
                         <div class="bg-white shadow-xl rounded-lg overflow-hidden h-full">
